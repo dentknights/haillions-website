@@ -47,8 +47,6 @@ export function OptimizedImage({
       priority={priority}
       sizes={sizes}
       quality={quality}
-      // Enable WebP format
-      format="webp"
     />
   );
 }
