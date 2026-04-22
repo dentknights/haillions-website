@@ -19,6 +19,9 @@ import {
   ArrowRight,
   CheckCircle,
   MapPin,
+  Zap,
+  Calendar,
+  Camera,
 } from "lucide-react";
 
 // Enhanced SEO metadata for AI search optimization
@@ -94,118 +97,99 @@ const services = [
   {
     icon: Car,
     title: "Paintless Dent Repair",
-    description: "Professional PDR using specialized tools to massage dents from behind the panel. Preserves your factory paint finish and maintains vehicle value. Perfect for minor dents, dings, and creases.",
+    description: "Professional PDR using specialized tools to massage dents from behind the panel. Preserves your factory paint finish and maintains vehicle value.",
     href: "/services/paintless-dent-repair",
-    keywords: ["PDR", "paintless dent removal", "dent repair"],
   },
   {
     icon: CloudRainIcon,
     title: "Hail Damage Repair",
-    description: "Complete hail damage restoration for vehicles affected by Texas storms. From small dings to severe storm damage, we restore your car, truck, or SUV to pre-storm condition. Insurance claims welcome.",
+    description: "Complete hail damage restoration for vehicles affected by Texas storms. From small dings to severe storm damage, we restore your car to pre-storm condition.",
     href: "/services/hail-damage",
-    keywords: ["hail damage", "storm damage repair", "hail dent removal"],
   },
   {
     icon: DoorOpenIcon,
     title: "Door Ding Removal",
-    description: "Quick and effective removal of parking lot dings and shopping cart dents. Mobile service comes to your home or office. No paint, no fillers, no trace—just flawless results in under an hour.",
+    description: "Quick removal of parking lot dings and shopping cart dents. Mobile service comes to your home or office. No paint, no fillers—just flawless results.",
     href: "/services/door-dings",
-    keywords: ["door ding repair", "parking lot dent", "shopping cart dent"],
   },
   {
     icon: Home,
     title: "Mobile PDR Service",
-    description: "We bring professional dent repair to you! Our fully-equipped mobile units serve Houston, Katy, Sugar Land, The Woodlands, and surrounding areas. Repairs at your home, office, or dealership.",
+    description: "We bring professional dent repair to you! Our fully-equipped mobile units serve Houston and surrounding areas at your home, office, or dealership.",
     href: "/services/mobile-service",
-    keywords: ["mobile dent repair", "at home dent repair", "workplace dent repair"],
   },
 ];
 
-// Value propositions with semantic markup
+// Value propositions
 const valuePropositions = [
   {
     icon: Shield,
     title: "Lifetime Warranty",
-    description: "Every repair backed by our comprehensive lifetime warranty for as long as you own your vehicle. If the dent ever reappears, we fix it free—guaranteed.",
-    schemaProp: "warranty",
+    description: "Every repair backed by our comprehensive lifetime warranty for as long as you own your vehicle.",
   },
   {
     icon: Clock,
     title: "30-Minute Estimates",
-    description: "Send us photos of your damage and receive a detailed, accurate estimate within 30 minutes. Our AI-powered analysis combined with expert review ensures fair pricing.",
-    schemaProp: "priceRange",
+    description: "Send us photos and receive a detailed, accurate estimate within 30 minutes with AI-powered analysis.",
   },
   {
     icon: Award,
-    title: "100% Satisfaction Guarantee",
-    description: "Not completely satisfied with the repair? You pay nothing. Our commitment to excellence means we stand behind every dent we remove with a no-risk guarantee.",
-    schemaProp: "aggregateRating",
+    title: "Satisfaction Guarantee",
+    description: "Not completely satisfied? You pay nothing. We stand behind every dent we remove with a no-risk guarantee.",
   },
   {
     icon: Wrench,
     title: "Factory Finish Preserved",
-    description: "No fillers, no sanding, no repainting. Your original factory paint stays intact, maintaining your vehicle's resale value and keeping manufacturer warranties valid.",
-    schemaProp: "serviceType",
+    description: "No fillers, no sanding, no repainting. Your original factory paint stays intact, maintaining resale value.",
   },
 ];
 
-// Customer testimonials with location data for local SEO
+// Customer testimonials
 const testimonials = [
   {
     name: "Michael Rodriguez",
     location: "Katy, TX",
     rating: 5,
-    text: "Hail Lions saved my truck after a major hailstorm. The mobile service came to my office, and the results were incredible. Can't even tell there was ever any damage! Best PDR service in Houston.",
+    text: "Hail Lions saved my truck after a major hailstorm. The mobile service came to my office, and the results were incredible. Can't even tell there was ever any damage!",
     vehicle: "2022 Ford F-150",
-    geo: "Katy, Texas",
   },
   {
     name: "Sarah Chen",
     location: "Sugar Land, TX",
     rating: 5,
-    text: "Fast, professional, and fairly priced. They removed a nasty door ding from my BMW in under an hour right in my driveway. The convenience of mobile service is unmatched. Highly recommend!",
+    text: "Fast, professional, and fairly priced. They removed a nasty door ding from my BMW in under an hour right in my driveway. The convenience is unmatched!",
     vehicle: "2021 BMW X5",
-    geo: "Sugar Land, Texas",
   },
   {
     name: "James Thompson",
     location: "The Woodlands, TX",
     rating: 5,
-    text: "After getting quotes from 3 body shops, Hail Lions was half the price with better results. My classic Mustang looks perfect again. These guys are true PDR artists.",
+    text: "After getting quotes from 3 body shops, Hail Lions was half the price with better results. My classic Mustang looks perfect again. True PDR artists.",
     vehicle: "1967 Ford Mustang",
-    geo: "The Woodlands, Texas",
   },
 ];
 
-// FAQ data optimized for voice search and featured snippets
+// FAQ data
 const faqs = [
   {
     question: "What is paintless dent repair (PDR) and how does it work?",
-    answer: "Paintless Dent Repair (PDR) is a specialized technique that removes dents and dings from vehicle panels without disturbing the original paint finish. Our certified technicians use precision tools to access the backside of damaged panels and gently massage the metal back to its original form. PDR is faster, more affordable, and preserves your vehicle's factory finish compared to traditional body shop repairs.",
+    answer: "Paintless Dent Repair (PDR) is a specialized technique that removes dents and dings from vehicle panels without disturbing the original paint finish. Our certified technicians use precision tools to access the backside of damaged panels and gently massage the metal back to its original form.",
   },
   {
     question: "How much does paintless dent repair cost in Houston?",
-    answer: "Paintless dent repair in Houston typically costs between $75-$150 for small door dings, $150-$300 for medium dents, and $300-$800+ for hail damage depending on severity. Hail Lions offers free estimates in 30 minutes and competitive pricing—often 40-60% less than traditional body shops. We also work with all insurance companies for hail damage claims.",
+    answer: "Paintless dent repair in Houston typically costs between $75-$150 for small door dings, $150-$300 for medium dents, and $300-$800+ for hail damage depending on severity. Hail Lions offers free estimates in 30 minutes and competitive pricing—often 40-60% less than traditional body shops.",
   },
   {
     question: "How long does paintless dent repair take?",
-    answer: "Most door dings and small dents can be repaired in 1-2 hours. Hail damage repairs typically take 1-3 days depending on severity. Our mobile service comes to your location, so there's no downtime dropping off or picking up your vehicle. We'll provide an accurate time estimate with your free quote.",
-  },
-  {
-    question: "Will PDR affect my vehicle warranty or CarFax report?",
-    answer: "No. Since paintless dent repair preserves your original factory paint and doesn't use fillers, sanding, or repainting, it maintains all manufacturer warranties and won't appear on vehicle history reports like CarFax. This helps preserve your vehicle's resale value compared to traditional bodywork.",
+    answer: "Most door dings and small dents can be repaired in 1-2 hours. Hail damage repairs typically take 1-3 days depending on severity. Our mobile service comes to your location, so there's no downtime dropping off or picking up your vehicle.",
   },
   {
     question: "Do you work with insurance companies for hail damage claims?",
-    answer: "Yes, we work with all major insurance providers including State Farm, Allstate, Geico, Progressive, and USAA for hail damage claims. We can handle the entire claims process for you, provide documentation, and often save you from paying a deductible. Our estimates are insurance-approved and we guarantee our work.",
-  },
-  {
-    question: "What areas do you serve for mobile dent repair?",
-    answer: "Our mobile paintless dent repair service covers the entire Greater Houston area including Houston, Katy, Sugar Land, The Woodlands, Spring, Cypress, Pearland, Kingwood, Humble, and surrounding communities. We come to your home, office, or dealership—wherever is most convenient for you.",
+    answer: "Yes, we work with all major insurance providers including State Farm, Allstate, Geico, Progressive, and USAA for hail damage claims. We can handle the entire claims process for you and often save you from paying a deductible.",
   },
 ];
 
-// Service areas for local SEO
+// Service areas
 const serviceAreas = [
   "Houston", "Katy", "Sugar Land", "The Woodlands", "Cypress", 
   "Spring", "Pearland", "Kingwood", "Humble", "Missouri City",
@@ -249,88 +233,115 @@ export default function HomePage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-        {/* Hero Section - Optimized for conversions and SEO */}
-        <section className="relative bg-gradient-to-br from-muted via-background to-muted overflow-hidden" aria-labelledby="hero-heading">
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5" />
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
-                  Houston&apos;s #1 Rated Mobile PDR Service
-                </Badge>
-                <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-                  Paintless Dent Repair{" "}
-                  <span className="text-primary">Done Right</span>
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
-                  Expert mobile paintless dent repair serving Houston, Katy, Sugar Land, and The Woodlands. 
-                  Hail damage, door dings, and creases restored to perfection with our lifetime warranty.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
-                    <Link href="/estimate">
-                      Get Free Estimate
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" variant="outline" className="text-lg">
-                    <Link href="tel:+13467020510">
-                      <Phone className="mr-2 h-5 w-5" />
-                      Call (346) 702-0510
-                    </Link>
-                  </Button>
-                </div>
-                <div className="flex items-center gap-6 pt-4">
-                  <div className="flex items-center gap-2">
-                    <div className="flex" aria-label="5 star rating">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                      ))}
-                    </div>
-                    <span className="font-semibold">4.9/5</span>
-                  </div>
-                  <span className="text-muted-foreground">150+ Google Reviews</span>
-                </div>
+        {/* Hero Section - Full width with gradient overlay */}
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden" aria-labelledby="hero-heading">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/60 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80 z-10" />
+            <Image
+              src="/images/hero-dent-repair.jpg"
+              alt="Professional paintless dent repair"
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
+            />
+          </div>
+          
+          {/* Hero Content */}
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+            <div className="max-w-3xl">
+              <Badge className="mb-6 bg-blue-500/20 text-blue-400 border-blue-500/30 hover:bg-blue-500/30 px-4 py-1.5 text-sm">
+                <Star className="w-3 h-3 mr-1 fill-blue-400" />
+                Houston&apos;s #1 Rated Mobile PDR Service
+              </Badge>
+              
+              <h1 id="hero-heading" className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+                Paintless Dent Repair{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+                  Done Right
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+                Expert mobile paintless dent repair serving Houston and Greater Houston area. 
+                Hail damage, door dings, and creases restored to perfection with our lifetime warranty.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 glow-blue">
+                  <Link href="/estimate">
+                    Get Free Estimate
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-gray-500 text-white hover:bg-white/10 text-lg px-8 py-6">
+                  <Link href="tel:+13467020510">
+                    <Phone className="mr-2 h-5 w-5" />
+                    (346) 702-0510
+                  </Link>
+                </Button>
               </div>
-              <div className="relative lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
-                <Image
-                  src="/images/hero-dent-repair.jpg"
-                  alt="Professional paintless dent repair technician removing hail damage from a vehicle in Houston"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+              
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap items-center gap-6 text-gray-400">
+                <div className="flex items-center gap-2">
+                  <div className="flex" aria-label="5 star rating">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <span className="font-semibold text-white">4.9/5</span>
+                  <span className="text-sm">150+ Reviews</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-blue-400" />
+                  <span>Lifetime Warranty</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-blue-400" />
+                  <span>Mobile Service</span>
+                </div>
               </div>
             </div>
           </div>
+          
+          {/* Bottom Gradient Fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-20" />
         </section>
 
-        {/* Services Section - Semantic HTML for AI search */}
-        <section className="py-16 lg:py-24 bg-background" aria-labelledby="services-heading">
+        {/* Services Grid - Clean cards with hover effects */}
+        <section className="py-20 lg:py-28 bg-background" aria-labelledby="services-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 id="services-heading" className="text-3xl md:text-4xl font-bold mb-4">
-                Our Paintless Dent Repair Services
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+                Our Services
+              </Badge>
+              <h2 id="services-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Professional Paintless Dent Repair
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-gray-400">
                 From minor door dings to severe hail damage, our certified PDR technicians 
-                deliver flawless results using state-of-the-art techniques. Mobile service available.
+                deliver flawless results using state-of-the-art techniques.
               </p>
             </div>
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service) => (
-                <Card key={service.title} className="group hover:shadow-lg transition-all duration-300 border-border/50 h-full">
+                <Card key={service.title} className="group bg-card border-border/50 card-hover overflow-hidden">
                   <CardContent className="p-6 flex flex-col h-full">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                      <service.icon className="h-6 w-6 text-primary group-hover:text-white" />
+                    <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-5 group-hover:bg-blue-500/20 transition-colors">
+                      <service.icon className="h-7 w-7 text-blue-400" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground mb-4 flex-grow">{service.description}</p>
-                    <Link href={service.href} className="inline-flex items-center text-primary font-medium hover:underline mt-auto">
+                    <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
+                    <p className="text-gray-400 mb-5 flex-grow leading-relaxed">{service.description}</p>
+                    <Link 
+                      href={service.href} 
+                      className="inline-flex items-center text-blue-400 font-medium hover:text-blue-300 transition-colors mt-auto group/link"
+                    >
                       Learn more
-                      <ArrowRight className="ml-1 h-4 w-4" />
+                      <ArrowRight className="ml-1 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
                     </Link>
                   </CardContent>
                 </Card>
@@ -339,43 +350,66 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Why Choose Us - Value propositions */}
-        <section className="py-16 lg:py-24 bg-muted" aria-labelledby="why-choose-heading">
+        {/* Why Choose Us - Split layout with image */}
+        <section className="py-20 lg:py-28 bg-gradient-to-b from-background to-muted" aria-labelledby="why-choose-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/pdr-process.jpg"
-                  alt="Hail Lions PDR technician using specialized tools to repair hail damage on a vehicle"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Image Side */}
+              <div className="relative">
+                <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden">
+                  <Image
+                    src="/images/pdr-process.jpg"
+                    alt="PDR technician repairing hail damage"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                </div>
+                {/* Floating Stats Card */}
+                <div className="absolute -bottom-6 -right-6 bg-card border border-border p-6 rounded-xl shadow-2xl">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                      <Award className="h-6 w-6 text-blue-400" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-white">150+</p>
+                      <p className="text-sm text-gray-400">5-Star Reviews</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+              
+              {/* Content Side */}
               <div className="space-y-8">
                 <div>
-                  <h2 id="why-choose-heading" className="text-3xl md:text-4xl font-bold mb-4">
-                    Why Choose Hail Lions PDR?
+                  <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+                    Why Choose Us
+                  </Badge>
+                  <h2 id="why-choose-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                    The Hail Lions Difference
                   </h2>
-                  <p className="text-lg text-muted-foreground">
+                  <p className="text-lg text-gray-400 leading-relaxed">
                     We&apos;re not just fixing dents—we&apos;re restoring your peace of mind. 
                     Our commitment to excellence has made us Houston&apos;s most trusted paintless dent repair service.
                   </p>
                 </div>
+                
                 <div className="grid sm:grid-cols-2 gap-6">
                   {valuePropositions.map((item) => (
                     <div key={item.title} className="flex gap-4">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="h-5 w-5 text-primary" />
+                      <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="h-6 w-6 text-blue-400" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                        <h3 className="font-semibold mb-1 text-white">{item.title}</h3>
+                        <p className="text-sm text-gray-400 leading-relaxed">{item.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                
+                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
                   <Link href="/about">Learn About Our Process</Link>
                 </Button>
               </div>
@@ -383,97 +417,99 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Service Areas - Local SEO */}
-        <section className="py-12 bg-background border-y" aria-labelledby="areas-heading">
+        {/* How It Works - Step by step process */}
+        <section className="py-20 lg:py-28 bg-muted" aria-labelledby="how-it-works-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 id="areas-heading" className="text-2xl font-bold text-center mb-6">
-              Mobile PDR Service Areas
-            </h2>
-            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We bring professional paintless dent repair to your location throughout the Greater Houston area
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {serviceAreas.map((area) => (
-                <span key={area} className="inline-flex items-center px-4 py-2 rounded-full bg-muted text-sm font-medium">
-                  <MapPin className="h-4 w-4 mr-1 text-primary" />
-                  {area}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* How It Works */}
-        <section className="py-16 lg:py-24 bg-background" aria-labelledby="how-it-works-heading">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold mb-4">
-                How Our Mobile PDR Service Works
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+                Simple Process
+              </Badge>
+              <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                How It Works
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-gray-400">
                 Getting your dents fixed has never been easier. Three simple steps to a flawless finish.
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            
+            <div className="grid md:grid-cols-3 gap-8 relative">
+              {/* Connecting Line */}
+              <div className="hidden md:block absolute top-16 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-blue-500/0 via-blue-500/50 to-blue-500/0" />
+              
               {[
                 {
                   step: "01",
-                  title: "Submit Photos Online",
-                  description: "Take clear photos of the damage and submit them through our online form. Our AI-powered analysis provides an instant preliminary estimate for your paintless dent repair.",
+                  icon: Camera,
+                  title: "Submit Photos",
+                  description: "Take clear photos of the damage and submit them through our online form. Our AI-powered analysis provides an instant preliminary estimate.",
                 },
                 {
                   step: "02",
-                  title: "Get Your Free Quote",
-                  description: "Our PDR experts review your submission and provide a detailed estimate within 30 minutes. No hidden fees, no surprises—just honest, fair pricing.",
+                  icon: Zap,
+                  title: "Get Your Quote",
+                  description: "Our PDR experts review your submission and provide a detailed estimate within 30 minutes. No hidden fees, no surprises—just honest pricing.",
                 },
                 {
                   step: "03",
+                  icon: Calendar,
                   title: "We Come to You",
-                  description: "Schedule a convenient time and location anywhere in Greater Houston. Our mobile unit arrives fully equipped to restore your vehicle on the spot.",
+                  description: "Schedule a convenient time and location anywhere in Greater Houston. Our mobile unit arrives fully equipped to restore your vehicle.",
                 },
-              ].map((item) => (
+              ].map((item, index) => (
                 <div key={item.step} className="relative text-center">
-                  <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6 shadow-lg shadow-blue-500/25 relative z-10">
+                    <item.icon className="h-8 w-8" />
+                  </div>
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-card border-2 border-blue-500 flex items-center justify-center text-xs font-bold text-blue-400 z-20">
                     {item.step}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
-            <div className="text-center mt-12">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link href="/estimate">Start Your Free Estimate</Link>
+            
+            <div className="text-center mt-16">
+              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg glow-blue">
+                <Link href="/estimate">
+                  Start Your Free Estimate
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* Testimonials - Social proof */}
-        <section className="py-16 lg:py-24 bg-muted" aria-labelledby="testimonials-heading">
+        {/* Testimonials - Dark cards with quotes */}
+        <section className="py-20 lg:py-28 bg-background" aria-labelledby="testimonials-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold mb-4">
-                What Houston Drivers Say About Our PDR Service
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+                Testimonials
+              </Badge>
+              <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                What Our Customers Say
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-gray-400">
                 Real reviews from real customers across Houston, Katy, Sugar Land, and The Woodlands.
               </p>
             </div>
+            
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((testimonial) => (
-                <Card key={testimonial.name} className="h-full">
-                  <CardContent className="p-6 flex flex-col h-full">
+                <Card key={testimonial.name} className="bg-card border-border/50 h-full relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full -mr-16 -mt-16" />
+                  <CardContent className="p-8 flex flex-col h-full relative">
                     <div className="flex mb-4" aria-label={`${testimonial.rating} out of 5 stars`}>
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                        <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-foreground mb-4 flex-grow">&ldquo;{testimonial.text}&rdquo;</p>
+                    <p className="text-gray-300 mb-6 flex-grow leading-relaxed text-lg">&ldquo;{testimonial.text}&rdquo;</p>
                     <div className="border-t border-border pt-4">
-                      <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                      <p className="text-xs text-muted-foreground mt-1">{testimonial.vehicle}</p>
+                      <p className="font-semibold text-white">{testimonial.name}</p>
+                      <p className="text-sm text-gray-400">{testimonial.location}</p>
+                      <p className="text-xs text-blue-400 mt-1">{testimonial.vehicle}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -482,55 +518,91 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* FAQ Section - Voice search optimized */}
-        <section className="py-16 lg:py-24 bg-background" aria-labelledby="faq-heading">
+        {/* Service Areas - Pills layout */}
+        <section className="py-16 bg-muted border-y border-border" aria-labelledby="areas-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 id="areas-heading" className="text-3xl font-bold mb-4 text-white">
+                Mobile Service Areas
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                We bring professional paintless dent repair to your location throughout the Greater Houston area
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {serviceAreas.map((area) => (
+                <span key={area} className="inline-flex items-center px-5 py-2.5 rounded-full bg-card border border-border text-gray-300 hover:border-blue-500/50 hover:text-blue-400 transition-colors">
+                  <MapPin className="h-4 w-4 mr-2 text-blue-400" />
+                  {area}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 lg:py-28 bg-background" aria-labelledby="faq-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
-                <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold mb-4">
-                  Frequently Asked Questions About Paintless Dent Repair
+                <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+                  FAQ
+                </Badge>
+                <h2 id="faq-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Frequently Asked Questions
                 </h2>
-                <p className="text-lg text-muted-foreground">
-                  Everything you need to know about PDR in Houston, from pricing to insurance claims.
+                <p className="text-lg text-gray-400">
+                  Everything you need to know about PDR in Houston.
                 </p>
               </div>
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <article key={index} className="border border-border rounded-lg p-6" itemScope itemType="https://schema.org/Question">
-                    <h3 className="font-semibold text-lg mb-2" itemProp="name">{faq.question}</h3>
+                  <article key={index} className="bg-card border border-border rounded-xl p-6 hover:border-blue-500/30 transition-colors" itemScope itemType="https://schema.org/Question">
+                    <h3 className="font-semibold text-lg mb-3 text-white flex items-start gap-3" itemProp="name">
+                      <span className="text-blue-400">Q:</span>
+                      {faq.question}
+                    </h3>
                     <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p className="text-muted-foreground" itemProp="text">{faq.answer}</p>
+                      <p className="text-gray-400 leading-relaxed pl-6" itemProp="text">
+                        {faq.answer}
+                      </p>
                     </div>
                   </article>
                 ))}
-              </div>
-              <div className="text-center mt-8">
-                <Link href="/faq" className="text-primary font-medium hover:underline inline-flex items-center">
-                  View all FAQs
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-primary text-primary-foreground" aria-labelledby="cta-heading">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Restore Your Vehicle?
-            </h2>
-            <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-              Get your free paintless dent repair estimate in 30 minutes. No obligation, no pressure—just honest 
-              assessments and fair pricing from Houston&apos;s trusted PDR experts.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary" className="text-lg px-8">
-                <Link href="/estimate">Get Free Estimate</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg">
-                <Link href="tel:+13467020510">Call (346) 702-0510</Link>
-              </Button>
+        {/* CTA Section - Full width with gradient */}
+        <section className="py-20 lg:py-28 relative overflow-hidden" aria-labelledby="cta-heading">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900" />
+          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10" />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Ready to Restore Your Vehicle?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                Get your free estimate in 30 minutes. Our mobile PDR service comes to you anywhere in Greater Houston.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-gray-100 text-lg px-8 py-6">
+                  <Link href="/estimate">
+                    Get Free Estimate
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-6">
+                  <Link href="tel:+13467020510">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call (346) 702-0510
+                  </Link>
+                </Button>
+              </div>
+              <p className="mt-6 text-blue-200 text-sm">
+                Lifetime warranty on all repairs • 100% satisfaction guaranteed
+              </p>
             </div>
           </div>
         </section>

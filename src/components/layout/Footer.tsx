@@ -29,15 +29,15 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-muted border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+    <footer className="bg-black border-t border-white/10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
+            <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="relative h-12 w-12">
                 <svg viewBox="0 0 40 40" className="h-full w-full" aria-hidden="true">
-                  <circle cx="20" cy="20" r="18" fill="#d97706" />
+                  <circle cx="20" cy="20" r="18" fill="#3b82f6" />
                   <path
                     d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8"
                     fill="none"
@@ -49,31 +49,31 @@ export function Footer() {
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold leading-none">Hail Lions</span>
-                <span className="text-sm text-muted-foreground">Paintless Dent Repair</span>
+                <span className="text-xl font-bold leading-none text-white">Hail Lions</span>
+                <span className="text-sm text-gray-400">Paintless Dent Repair</span>
               </div>
             </Link>
-            <p className="text-muted-foreground mb-6 max-w-sm">
+            <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
               Houston&apos;s premier paintless dent repair service. Mobile PDR experts 
               restoring your vehicle to perfection with lifetime warranty.
             </p>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <a
                 href="tel:+13467020510"
-                className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
+                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
               >
-                <Phone className="h-5 w-5 text-primary" />
+                <Phone className="h-5 w-5 text-blue-400" />
                 <span>(346) 702-0510</span>
               </a>
               <a
                 href="mailto:info@haillions.com"
-                className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
+                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
               >
-                <Mail className="h-5 w-5 text-primary" />
+                <Mail className="h-5 w-5 text-blue-400" />
                 <span>info@haillions.com</span>
               </a>
-              <div className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 text-gray-300">
+                <MapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <span>Mobile Service - Houston, TX<br />Serving Greater Houston Area</span>
               </div>
             </div>
@@ -81,13 +81,13 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold mb-4">Services</h3>
+            <h3 className="font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-gray-400 hover:text-blue-400 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -98,13 +98,13 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-gray-400 hover:text-blue-400 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -115,13 +115,13 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold mb-4">Support</h3>
+            <h3 className="font-semibold mb-4 text-white">Support</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-gray-400 hover:text-blue-400 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -132,8 +132,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-500">
             &copy; {new Date().getFullYear()} Hail Lions PDR. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
@@ -141,7 +141,7 @@ export function Footer() {
               href="https://facebook.com/haillions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-background hover:bg-accent transition-colors"
+              className="p-2 rounded-full bg-white/5 hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-colors"
               aria-label="Facebook"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -152,7 +152,7 @@ export function Footer() {
               href="https://instagram.com/haillions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-background hover:bg-accent transition-colors"
+              className="p-2 rounded-full bg-white/5 hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-colors"
               aria-label="Instagram"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -163,7 +163,7 @@ export function Footer() {
               href="https://twitter.com/haillions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-background hover:bg-accent transition-colors"
+              className="p-2 rounded-full bg-white/5 hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-colors"
               aria-label="Twitter"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -171,11 +171,11 @@ export function Footer() {
               </svg>
             </a>
           </div>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">
+          <div className="flex items-center gap-4 text-sm text-gray-500">
+            <Link href="/privacy" className="hover:text-gray-300 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-foreground transition-colors">
+            <Link href="/terms" className="hover:text-gray-300 transition-colors">
               Terms of Service
             </Link>
           </div>
