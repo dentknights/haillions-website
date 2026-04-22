@@ -19,7 +19,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-black/90 backdrop-blur-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -41,7 +41,7 @@ export function Header() {
               <span className="text-lg font-bold leading-none text-white">
                 Hail Lions
               </span>
-              <span className="text-xs text-gray-400">PDR</span>
+              <span className="text-xs text-gray-500">PDR</span>
             </div>
           </Link>
 
@@ -55,7 +55,7 @@ export function Header() {
                   "px-4 py-2 text-sm font-medium transition-colors rounded-md",
                   link.href === "/estimate" || link.href === "/schedule"
                     ? "text-blue-400 hover:text-blue-300 hover:bg-blue-500/10"
-                    : "text-gray-300 hover:text-white hover:bg-white/5"
+                    : "text-gray-400 hover:text-white hover:bg-white/5"
                 )}
               >
                 {link.label}
@@ -67,7 +67,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:+13467020510"
-              className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
             >
               <Phone className="h-4 w-4" />
               <span>(346) 702-0510</span>
@@ -106,7 +106,7 @@ export function Header() {
                     "px-4 py-3 text-base font-medium rounded-md transition-colors",
                     link.href === "/estimate" || link.href === "/schedule"
                       ? "text-blue-400 hover:text-blue-300 bg-blue-500/10"
-                      : "text-gray-300 hover:text-white hover:bg-white/5"
+                      : "text-gray-400 hover:text-white hover:bg-white/5"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -116,7 +116,7 @@ export function Header() {
               <div className="mt-4 pt-4 border-t border-white/10">
                 <a
                   href="tel:+13467020510"
-                  className="flex items-center gap-2 px-4 py-3 text-base font-medium text-gray-300"
+                  className="flex items-center gap-2 px-4 py-3 text-base font-medium text-gray-400"
                 >
                   <Phone className="h-5 w-5" />
                   <span>(346) 702-0510</span>

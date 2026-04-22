@@ -29,7 +29,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t border-white/10">
+    <footer className="bg-[#0a0a0a] border-t border-[#222222]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
           {/* Brand Column */}
@@ -50,29 +50,29 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold leading-none text-white">Hail Lions</span>
-                <span className="text-sm text-gray-400">Paintless Dent Repair</span>
+                <span className="text-sm text-gray-500">Paintless Dent Repair</span>
               </div>
             </Link>
-            <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
+            <p className="text-gray-500 mb-6 max-w-sm leading-relaxed">
               Houston&apos;s premier paintless dent repair service. Mobile PDR experts 
               restoring your vehicle to perfection with lifetime warranty.
             </p>
             <div className="space-y-4">
               <a
                 href="tel:+13467020510"
-                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
               >
                 <Phone className="h-5 w-5 text-blue-400" />
                 <span>(346) 702-0510</span>
               </a>
               <a
                 href="mailto:info@haillions.com"
-                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
               >
                 <Mail className="h-5 w-5 text-blue-400" />
                 <span>info@haillions.com</span>
               </a>
-              <div className="flex items-start gap-3 text-gray-300">
+              <div className="flex items-start gap-3 text-gray-400">
                 <MapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <span>Mobile Service - Houston, TX<br />Serving Greater Houston Area</span>
               </div>
@@ -87,7 +87,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
+                    className="text-gray-500 hover:text-blue-400 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -104,7 +104,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
+                    className="text-gray-500 hover:text-blue-400 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -121,7 +121,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
+                    className="text-gray-500 hover:text-blue-400 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -132,8 +132,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500">
+        <div className="mt-12 pt-8 border-t border-[#222222] flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-600">
             &copy; {new Date().getFullYear()} Hail Lions PDR. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
@@ -141,7 +141,7 @@ export function Footer() {
               href="https://facebook.com/haillions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white/5 hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-colors"
+              className="p-2 rounded-full bg-[#111111] hover:bg-blue-500/20 text-gray-500 hover:text-blue-400 transition-colors"
               aria-label="Facebook"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -152,7 +152,7 @@ export function Footer() {
               href="https://instagram.com/haillions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white/5 hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-colors"
+              className="p-2 rounded-full bg-[#111111] hover:bg-blue-500/20 text-gray-500 hover:text-blue-400 transition-colors"
               aria-label="Instagram"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -163,7 +163,7 @@ export function Footer() {
               href="https://twitter.com/haillions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white/5 hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-colors"
+              className="p-2 rounded-full bg-[#111111] hover:bg-blue-500/20 text-gray-500 hover:text-blue-400 transition-colors"
               aria-label="Twitter"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -171,11 +171,11 @@ export function Footer() {
               </svg>
             </a>
           </div>
-          <div className="flex items-center gap-4 text-sm text-gray-500">
-            <Link href="/privacy" className="hover:text-gray-300 transition-colors">
+          <div className="flex items-center gap-4 text-sm text-gray-600">
+            <Link href="/privacy" className="hover:text-gray-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-gray-300 transition-colors">
+            <Link href="/terms" className="hover:text-gray-400 transition-colors">
               Terms of Service
             </Link>
           </div>

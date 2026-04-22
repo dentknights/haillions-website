@@ -45,72 +45,72 @@
 
 :root {
   --radius: 0.625rem;
-  /* Dark Black, Silver, Blue Theme - Light Mode */
-  --background: #0a0a0a;
-  --foreground: #e5e5e5;
-  --card: #141414;
-  --card-foreground: #e5e5e5;
-  --popover: #141414;
-  --popover-foreground: #e5e5e5;
+  /* TRUE BLACK Theme - Black, Silver, Blue */
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #0a0a0a;
+  --card-foreground: #ffffff;
+  --popover: #0a0a0a;
+  --popover-foreground: #ffffff;
   --primary: #3b82f6;
   --primary-foreground: #ffffff;
-  --secondary: #1f1f1f;
+  --secondary: #111111;
   --secondary-foreground: #c0c0c0;
-  --muted: #1f1f1f;
-  --muted-foreground: #a0a0a0;
+  --muted: #111111;
+  --muted-foreground: #888888;
   --accent: #2563eb;
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
-  --border: #2a2a2a;
-  --input: #2a2a2a;
+  --border: #222222;
+  --input: #222222;
   --ring: #3b82f6;
   --chart-1: #3b82f6;
   --chart-2: #60a5fa;
   --chart-3: #93c5fd;
   --chart-4: #1d4ed8;
   --chart-5: #1e40af;
-  --sidebar: #0f0f0f;
-  --sidebar-foreground: #e5e5e5;
+  --sidebar: #000000;
+  --sidebar-foreground: #ffffff;
   --sidebar-primary: #3b82f6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1f1f1f;
-  --sidebar-accent-foreground: #e5e5e5;
-  --sidebar-border: #2a2a2a;
+  --sidebar-accent: #111111;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #222222;
   --sidebar-ring: #3b82f6;
 }
 
 .dark {
-  /* Dark Black, Silver, Blue Theme - Dark Mode (same as light for consistency) */
-  --background: #050505;
-  --foreground: #f0f0f0;
-  --card: #0f0f0f;
-  --card-foreground: #f0f0f0;
-  --popover: #0f0f0f;
-  --popover-foreground: #f0f0f0;
+  /* Same as light for consistency - TRUE BLACK */
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #0a0a0a;
+  --card-foreground: #ffffff;
+  --popover: #0a0a0a;
+  --popover-foreground: #ffffff;
   --primary: #60a5fa;
-  --primary-foreground: #0a0a0a;
-  --secondary: #1a1a1a;
+  --primary-foreground: #000000;
+  --secondary: #111111;
   --secondary-foreground: #c0c0c0;
-  --muted: #1a1a1a;
-  --muted-foreground: #a0a0a0;
+  --muted: #111111;
+  --muted-foreground: #888888;
   --accent: #3b82f6;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
-  --border: #262626;
-  --input: #262626;
+  --border: #222222;
+  --input: #222222;
   --ring: #60a5fa;
   --chart-1: #60a5fa;
   --chart-2: #3b82f6;
   --chart-3: #2563eb;
   --chart-4: #1d4ed8;
   --chart-5: #1e40af;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #f0f0f0;
+  --sidebar: #000000;
+  --sidebar-foreground: #ffffff;
   --sidebar-primary: #60a5fa;
-  --sidebar-primary-foreground: #0a0a0a;
-  --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: #f0f0f0;
-  --sidebar-border: #262626;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #111111;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #222222;
   --sidebar-ring: #60a5fa;
 }
 
@@ -123,29 +123,19 @@
   }
 }
 
-/* Custom Hail Lions Brand Colors - Black, Silver, Blue */
+/* Custom Hail Lions Brand Colors - TRUE BLACK, Silver, Blue */
 :root {
-  --hl-black: #0a0a0a;
-  --hl-black-light: #141414;
-  --hl-black-lighter: #1f1f1f;
+  --hl-black: #000000;
+  --hl-black-light: #0a0a0a;
+  --hl-black-lighter: #111111;
   --hl-silver: #c0c0c0;
   --hl-silver-light: #e5e5e5;
-  --hl-silver-dark: #a0a0a0;
+  --hl-silver-dark: #888888;
   --hl-blue: #3b82f6;
   --hl-blue-light: #60a5fa;
   --hl-blue-dark: #2563eb;
   --hl-blue-darker: #1d4ed8;
   --hl-white: #ffffff;
-  --hl-gray-50: #f5f5f5;
-  --hl-gray-100: #e5e5e5;
-  --hl-gray-200: #d4d4d4;
-  --hl-gray-300: #a0a0a0;
-  --hl-gray-400: #808080;
-  --hl-gray-500: #666666;
-  --hl-gray-600: #4d4d4d;
-  --hl-gray-700: #333333;
-  --hl-gray-800: #262626;
-  --hl-gray-900: #1a1a1a;
 }
 
 /* Typography */
@@ -251,18 +241,18 @@
   }
 }
 
-/* Custom gradient backgrounds */
+/* TRUE BLACK gradient backgrounds */
 .bg-gradient-dark {
-  background: linear-gradient(135deg, #0a0a0a 0%, #141414 50%, #1f1f1f 100%);
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
 }
 
 .bg-gradient-blue {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, #000000 0%, #0a0a1a 50%, #0a1628 100%);
 }
 
 /* Silver text effect */
 .text-silver {
-  background: linear-gradient(135deg, #e5e5e5 0%, #c0c0c0 50%, #a0a0a0 100%);
+  background: linear-gradient(135deg, #e5e5e5 0%, #c0c0c0 50%, #888888 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -270,15 +260,25 @@
 
 /* Blue glow effect */
 .glow-blue {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4), 0 0 60px rgba(59, 130, 246, 0.2);
 }
 
-/* Card hover effect */
+/* Card hover effect - subtle on true black */
 .card-hover {
-  @apply transition-all duration-300;
+  @apply transition-all duration-300 border border-[#222222];
 }
 
 .card-hover:hover {
   @apply border-blue-500/50;
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+}
+
+/* Section spacing for true black theme */
+.section-padding {
+  @apply py-24 lg:py-32;
+}
+
+/* Container max width */
+.container-tight {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }
