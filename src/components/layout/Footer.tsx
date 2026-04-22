@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const footerLinks = {
@@ -29,51 +30,46 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-[#222222]">
+    <footer className="bg-[#050810] border-t border-[#1e3a5f]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="relative h-12 w-12">
-                <svg viewBox="0 0 40 40" className="h-full w-full" aria-hidden="true">
-                  <circle cx="20" cy="20" r="18" fill="#3b82f6" />
-                  <path
-                    d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                  <circle cx="20" cy="20" r="3" fill="white" />
-                </svg>
+                <Image
+                  src="/images/hail-lions-logo.png"
+                  alt="Hail Lions PDR"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold leading-none text-white">Hail Lions</span>
-                <span className="text-sm text-gray-500">Paintless Dent Repair</span>
+                <span className="text-xl font-bold leading-none text-silver">Hail Lions</span>
+                <span className="text-sm text-[#64748b]">Paintless Dent Repair</span>
               </div>
             </Link>
-            <p className="text-gray-500 mb-6 max-w-sm leading-relaxed">
+            <p className="text-[#64748b] mb-6 max-w-sm leading-relaxed">
               Houston&apos;s premier paintless dent repair service. Mobile PDR experts 
               restoring your vehicle to perfection with lifetime warranty.
             </p>
             <div className="space-y-4">
               <a
                 href="tel:+13467020510"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-[#94a3b8] hover:text-[#e8eaed] transition-colors"
               >
-                <Phone className="h-5 w-5 text-blue-400" />
+                <Phone className="h-5 w-5 text-[#60a5fa]" />
                 <span>(346) 702-0510</span>
               </a>
               <a
                 href="mailto:info@haillions.com"
-                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-[#94a3b8] hover:text-[#e8eaed] transition-colors"
               >
-                <Mail className="h-5 w-5 text-blue-400" />
+                <Mail className="h-5 w-5 text-[#60a5fa]" />
                 <span>info@haillions.com</span>
               </a>
-              <div className="flex items-start gap-3 text-gray-400">
-                <MapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 text-[#94a3b8]">
+                <MapPin className="h-5 w-5 text-[#60a5fa] flex-shrink-0 mt-0.5" />
                 <span>Mobile Service - Houston, TX<br />Serving Greater Houston Area</span>
               </div>
             </div>
@@ -81,13 +77,13 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">Services</h3>
+            <h3 className="font-semibold mb-4 text-[#e8eaed]">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-500 hover:text-blue-400 transition-colors"
+                    className="text-[#64748b] hover:text-[#60a5fa] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -98,13 +94,13 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">Company</h3>
+            <h3 className="font-semibold mb-4 text-[#e8eaed]">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-500 hover:text-blue-400 transition-colors"
+                    className="text-[#64748b] hover:text-[#60a5fa] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -115,13 +111,13 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">Support</h3>
+            <h3 className="font-semibold mb-4 text-[#e8eaed]">Support</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-500 hover:text-blue-400 transition-colors"
+                    className="text-[#64748b] hover:text-[#60a5fa] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -132,8 +128,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-[#222222] flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-600">
+        <div className="mt-12 pt-8 border-t border-[#1e3a5f] flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-[#475569]">
             &copy; {new Date().getFullYear()} Hail Lions PDR. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
@@ -141,7 +137,7 @@ export function Footer() {
               href="https://facebook.com/haillions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-[#111111] hover:bg-blue-500/20 text-gray-500 hover:text-blue-400 transition-colors"
+              className="p-2 rounded-full bg-[#1e293b] hover:bg-[#60a5fa]/20 text-[#64748b] hover:text-[#60a5fa] transition-colors"
               aria-label="Facebook"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -152,7 +148,7 @@ export function Footer() {
               href="https://instagram.com/haillions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-[#111111] hover:bg-blue-500/20 text-gray-500 hover:text-blue-400 transition-colors"
+              className="p-2 rounded-full bg-[#1e293b] hover:bg-[#60a5fa]/20 text-[#64748b] hover:text-[#60a5fa] transition-colors"
               aria-label="Instagram"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -163,7 +159,7 @@ export function Footer() {
               href="https://twitter.com/haillions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-[#111111] hover:bg-blue-500/20 text-gray-500 hover:text-blue-400 transition-colors"
+              className="p-2 rounded-full bg-[#1e293b] hover:bg-[#60a5fa]/20 text-[#64748b] hover:text-[#60a5fa] transition-colors"
               aria-label="Twitter"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -171,11 +167,11 @@ export function Footer() {
               </svg>
             </a>
           </div>
-          <div className="flex items-center gap-4 text-sm text-gray-600">
-            <Link href="/privacy" className="hover:text-gray-400 transition-colors">
+          <div className="flex items-center gap-4 text-sm text-[#475569]">
+            <Link href="/privacy" className="hover:text-[#94a3b8] transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-gray-400 transition-colors">
+            <Link href="/terms" className="hover:text-[#94a3b8] transition-colors">
               Terms of Service
             </Link>
           </div>

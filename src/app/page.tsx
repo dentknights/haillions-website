@@ -216,52 +216,65 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="bg-black">
+      <main id="main-content" className="bg-[#0a0f1a]">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black" aria-labelledby="hero-heading">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0a0f1a] via-[#111827] to-[#0a0f1a]" aria-labelledby="hero-heading">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black z-10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-[#111827]/60 to-[#0a0f1a]/90 z-10" />
             <Image
               src="/images/hero-dent-repair.jpg"
               alt="Professional paintless dent repair"
               fill
-              className="object-cover opacity-30"
+              className="object-cover opacity-20"
               priority
               sizes="100vw"
             />
           </div>
           
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-24">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge className="mb-8 bg-blue-500/10 text-blue-400 border-blue-500/20 hover:bg-blue-500/20 px-4 py-1.5 text-sm">
-                <Star className="w-3 h-3 mr-1 fill-blue-400" />
+              {/* Logo */}
+              <div className="mb-8 flex justify-center">
+                <div className="relative w-24 h-24">
+                  <Image
+                    src="/images/hail-lions-logo.png"
+                    alt="Hail Lions PDR"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <Badge className="mb-8 bg-[#60a5fa]/10 text-[#60a5fa] border-[#60a5fa]/20 hover:bg-[#60a5fa]/20 px-4 py-1.5 text-sm">
+                <Star className="w-3 h-3 mr-1 fill-[#60a5fa]" />
                 Houston&apos;s #1 Rated Mobile PDR Service
               </Badge>
               
-              <h1 id="hero-heading" className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-8">
+              <h1 id="hero-heading" className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-silver mb-8">
                 Paintless Dent Repair
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mt-2">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#93c5fd] to-[#60a5fa] mt-2">
                   Done Right
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-[#94a3b8] mb-10 max-w-2xl mx-auto leading-relaxed">
                 Expert mobile paintless dent repair serving Houston and Greater Houston area. 
                 Hail damage, door dings, and creases restored to perfection.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-10 py-6 glow-blue">
+                <Button asChild size="lg" className="bg-[#60a5fa] hover:bg-[#3b82f6] text-[#0a0f1a] font-semibold text-lg px-10 py-6 glow-blue">
                   <Link href="/estimate">
                     Get Free Estimate
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-gray-700 text-white hover:bg-white/5 text-lg px-10 py-6">
+                <Button asChild size="lg" variant="outline" className="border-[#1e3a5f] text-[#e8eaed] hover:bg-[#1e3a5f]/50 text-lg px-10 py-6">
                   <Link href="tel:+13467020510">
                     <Phone className="mr-2 h-5 w-5" />
                     (346) 702-0510
@@ -269,22 +282,22 @@ export default function HomePage() {
                 </Button>
               </div>
               
-              <div className="flex flex-wrap items-center justify-center gap-8 text-gray-500">
+              <div className="flex flex-wrap items-center justify-center gap-8 text-[#64748b]">
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <span className="font-semibold text-white">4.9/5</span>
+                  <span className="font-semibold text-[#e8eaed]">4.9/5</span>
                   <span className="text-sm">150+ Reviews</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-blue-400" />
+                  <CheckCircle className="h-4 w-4 text-[#60a5fa]" />
                   <span>Lifetime Warranty</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-blue-400" />
+                  <CheckCircle className="h-4 w-4 text-[#60a5fa]" />
                   <span>Mobile Service</span>
                 </div>
               </div>
@@ -293,16 +306,16 @@ export default function HomePage() {
         </section>
 
         {/* Services Section */}
-        <section className="py-24 lg:py-32 bg-black" aria-labelledby="services-heading">
+        <section className="py-24 lg:py-32 bg-[#0a0f1a]" aria-labelledby="services-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+              <Badge className="mb-4 bg-[#60a5fa]/10 text-[#60a5fa] border-[#60a5fa]/20">
                 Our Services
               </Badge>
-              <h2 id="services-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 id="services-heading" className="text-4xl md:text-5xl font-bold mb-6 text-silver">
                 Professional Paintless Dent Repair
               </h2>
-              <p className="text-lg text-gray-500">
+              <p className="text-lg text-[#64748b]">
                 From minor door dings to severe hail damage, our certified PDR technicians 
                 deliver flawless results using state-of-the-art techniques.
               </p>
@@ -310,16 +323,16 @@ export default function HomePage() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service) => (
-                <Card key={service.title} className="group bg-[#0a0a0a] border-[#222222] card-hover">
+                <Card key={service.title} className="group bg-[#111827] border-[#1e3a5f] card-hover">
                   <CardContent className="p-8">
-                    <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
-                      <service.icon className="h-7 w-7 text-blue-400" />
+                    <div className="w-14 h-14 rounded-xl bg-[#60a5fa]/10 flex items-center justify-center mb-6 group-hover:bg-[#60a5fa]/20 transition-colors">
+                      <service.icon className="h-7 w-7 text-[#60a5fa]" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
-                    <p className="text-gray-500 mb-6 leading-relaxed">{service.description}</p>
+                    <h3 className="text-xl font-semibold mb-3 text-[#e8eaed]">{service.title}</h3>
+                    <p className="text-[#64748b] mb-6 leading-relaxed">{service.description}</p>
                     <Link 
                       href={service.href} 
-                      className="inline-flex items-center text-blue-400 font-medium hover:text-blue-300 transition-colors group/link"
+                      className="inline-flex items-center text-[#60a5fa] font-medium hover:text-[#93c5fd] transition-colors group/link"
                     >
                       Learn more
                       <ArrowRight className="ml-1 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
@@ -332,11 +345,11 @@ export default function HomePage() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-24 lg:py-32 bg-[#0a0a0a]" aria-labelledby="why-choose-heading">
+        <section className="py-24 lg:py-32 bg-[#111827]" aria-labelledby="why-choose-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative">
-                <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden border border-[#222222]">
+                <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden border border-[#1e3a5f]">
                   <Image
                     src="/images/pdr-process.jpg"
                     alt="PDR technician repairing hail damage"
@@ -345,14 +358,14 @@ export default function HomePage() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-[#0a0a0a] border border-[#222222] p-6 rounded-xl">
+                <div className="absolute -bottom-6 -right-6 bg-[#111827] border border-[#1e3a5f] p-6 rounded-xl">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
-                      <Award className="h-6 w-6 text-blue-400" />
+                    <div className="w-12 h-12 rounded-full bg-[#60a5fa]/20 flex items-center justify-center">
+                      <Award className="h-6 w-6 text-[#60a5fa]" />
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">150+</p>
-                      <p className="text-sm text-gray-500">5-Star Reviews</p>
+                      <p className="text-2xl font-bold text-silver">150+</p>
+                      <p className="text-sm text-[#64748b]">5-Star Reviews</p>
                     </div>
                   </div>
                 </div>
@@ -360,13 +373,13 @@ export default function HomePage() {
               
               <div className="space-y-8">
                 <div>
-                  <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+                  <Badge className="mb-4 bg-[#60a5fa]/10 text-[#60a5fa] border-[#60a5fa]/20">
                     Why Choose Us
                   </Badge>
-                  <h2 id="why-choose-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  <h2 id="why-choose-heading" className="text-4xl md:text-5xl font-bold mb-6 text-silver">
                     The Hail Lions Difference
                   </h2>
-                  <p className="text-lg text-gray-500 leading-relaxed">
+                  <p className="text-lg text-[#64748b] leading-relaxed">
                     We&apos;re not just fixing dents—we&apos;re restoring your peace of mind. 
                     Our commitment to excellence has made us Houston&apos;s most trusted paintless dent repair service.
                   </p>
@@ -375,18 +388,18 @@ export default function HomePage() {
                 <div className="grid sm:grid-cols-2 gap-6">
                   {valuePropositions.map((item) => (
                     <div key={item.title} className="flex gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="h-6 w-6 text-blue-400" />
+                      <div className="w-12 h-12 rounded-xl bg-[#60a5fa]/10 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="h-6 w-6 text-[#60a5fa]" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1 text-white">{item.title}</h3>
-                        <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                        <h3 className="font-semibold mb-1 text-[#e8eaed]">{item.title}</h3>
+                        <p className="text-sm text-[#64748b] leading-relaxed">{item.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
                 
-                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+                <Button asChild size="lg" className="bg-[#60a5fa] hover:bg-[#3b82f6] text-[#0a0f1a] font-semibold px-8">
                   <Link href="/about">Learn About Our Process</Link>
                 </Button>
               </div>
@@ -395,22 +408,22 @@ export default function HomePage() {
         </section>
 
         {/* How It Works */}
-        <section className="py-24 lg:py-32 bg-black" aria-labelledby="how-it-works-heading">
+        <section className="py-24 lg:py-32 bg-[#0a0f1a]" aria-labelledby="how-it-works-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+              <Badge className="mb-4 bg-[#60a5fa]/10 text-[#60a5fa] border-[#60a5fa]/20">
                 Simple Process
               </Badge>
-              <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-bold mb-6 text-silver">
                 How It Works
               </h2>
-              <p className="text-lg text-gray-500">
+              <p className="text-lg text-[#64748b]">
                 Getting your dents fixed has never been easier. Three simple steps to a flawless finish.
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 relative">
-              <div className="hidden md:block absolute top-16 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+              <div className="hidden md:block absolute top-16 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-[#60a5fa]/50 to-transparent" />
               
               {[
                 {
@@ -433,20 +446,20 @@ export default function HomePage() {
                 },
               ].map((item) => (
                 <div key={item.step} className="relative text-center">
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/20">
-                    <item.icon className="h-8 w-8 text-white" />
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#60a5fa]/20">
+                    <item.icon className="h-8 w-8 text-[#0a0f1a]" />
                   </div>
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#0a0a0a] border border-blue-500 flex items-center justify-center text-xs font-bold text-blue-400">
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#111827] border border-[#60a5fa] flex items-center justify-center text-xs font-bold text-[#60a5fa]">
                     {item.step}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
-                  <p className="text-gray-500 leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-[#e8eaed]">{item.title}</h3>
+                  <p className="text-[#64748b] leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
             
             <div className="text-center mt-16">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 text-lg glow-blue">
+              <Button asChild size="lg" className="bg-[#60a5fa] hover:bg-[#3b82f6] text-[#0a0f1a] font-semibold px-10 py-6 text-lg glow-blue">
                 <Link href="/estimate">
                   Start Your Free Estimate
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -457,34 +470,34 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-24 lg:py-32 bg-[#0a0a0a]" aria-labelledby="testimonials-heading">
+        <section className="py-24 lg:py-32 bg-[#111827]" aria-labelledby="testimonials-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+              <Badge className="mb-4 bg-[#60a5fa]/10 text-[#60a5fa] border-[#60a5fa]/20">
                 Testimonials
               </Badge>
-              <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-bold mb-6 text-silver">
                 What Our Customers Say
               </h2>
-              <p className="text-lg text-gray-500">
+              <p className="text-lg text-[#64748b]">
                 Real reviews from real customers across Houston, Katy, Sugar Land, and The Woodlands.
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((testimonial) => (
-                <Card key={testimonial.name} className="bg-[#111111] border-[#222222]">
+                <Card key={testimonial.name} className="bg-[#1e293b] border-[#1e3a5f]">
                   <CardContent className="p-8">
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-gray-400 mb-6 leading-relaxed text-lg">&ldquo;{testimonial.text}&rdquo;</p>
-                    <div className="border-t border-[#222222] pt-4">
-                      <p className="font-semibold text-white">{testimonial.name}</p>
-                      <p className="text-sm text-gray-500">{testimonial.location}</p>
-                      <p className="text-xs text-blue-400 mt-1">{testimonial.vehicle}</p>
+                    <p className="text-[#94a3b8] mb-6 leading-relaxed text-lg">&ldquo;{testimonial.text}&rdquo;</p>
+                    <div className="border-t border-[#1e3a5f] pt-4">
+                      <p className="font-semibold text-[#e8eaed]">{testimonial.name}</p>
+                      <p className="text-sm text-[#64748b]">{testimonial.location}</p>
+                      <p className="text-xs text-[#60a5fa] mt-1">{testimonial.vehicle}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -494,20 +507,20 @@ export default function HomePage() {
         </section>
 
         {/* Service Areas */}
-        <section className="py-20 bg-black border-y border-[#222222]" aria-labelledby="areas-heading">
+        <section className="py-20 bg-[#0a0f1a] border-y border-[#1e3a5f]" aria-labelledby="areas-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 id="areas-heading" className="text-3xl font-bold mb-4 text-white">
+              <h2 id="areas-heading" className="text-3xl font-bold mb-4 text-silver">
                 Mobile Service Areas
               </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto">
+              <p className="text-[#64748b] max-w-2xl mx-auto">
                 We bring professional paintless dent repair to your location throughout the Greater Houston area
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {serviceAreas.map((area) => (
-                <span key={area} className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#0a0a0a] border border-[#222222] text-gray-400 hover:border-blue-500/50 hover:text-blue-400 transition-colors">
-                  <MapPin className="h-4 w-4 mr-2 text-blue-400" />
+                <span key={area} className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#111827] border border-[#1e3a5f] text-[#94a3b8] hover:border-[#60a5fa]/50 hover:text-[#60a5fa] transition-colors">
+                  <MapPin className="h-4 w-4 mr-2 text-[#60a5fa]" />
                   {area}
                 </span>
               ))}
@@ -516,29 +529,29 @@ export default function HomePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-24 lg:py-32 bg-black" aria-labelledby="faq-heading">
+        <section className="py-24 lg:py-32 bg-[#0a0f1a]" aria-labelledby="faq-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
-                <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">
+                <Badge className="mb-4 bg-[#60a5fa]/10 text-[#60a5fa] border-[#60a5fa]/20">
                   FAQ
                 </Badge>
-                <h2 id="faq-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                <h2 id="faq-heading" className="text-4xl md:text-5xl font-bold mb-6 text-silver">
                   Frequently Asked Questions
                 </h2>
-                <p className="text-lg text-gray-500">
+                <p className="text-lg text-[#64748b]">
                   Everything you need to know about PDR in Houston.
                 </p>
               </div>
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <article key={index} className="bg-[#0a0a0a] border border-[#222222] rounded-xl p-6 hover:border-blue-500/30 transition-colors" itemScope itemType="https://schema.org/Question">
-                    <h3 className="font-semibold text-lg mb-3 text-white flex items-start gap-3" itemProp="name">
-                      <span className="text-blue-400">Q:</span>
+                  <article key={index} className="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 hover:border-[#60a5fa]/30 transition-colors" itemScope itemType="https://schema.org/Question">
+                    <h3 className="font-semibold text-lg mb-3 text-[#e8eaed] flex items-start gap-3" itemProp="name">
+                      <span className="text-[#60a5fa]">Q:</span>
                       {faq.question}
                     </h3>
                     <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p className="text-gray-500 leading-relaxed pl-6" itemProp="text">
+                      <p className="text-[#64748b] leading-relaxed pl-6" itemProp="text">
                         {faq.answer}
                       </p>
                     </div>
@@ -551,31 +564,31 @@ export default function HomePage() {
 
         {/* CTA Section */}
         <section className="py-24 lg:py-32 relative overflow-hidden" aria-labelledby="cta-heading">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a5f] via-[#0f172a] to-[#0a0f1a]" />
           <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5" />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold mb-6 text-silver">
                 Ready to Restore Your Vehicle?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl text-[#93c5fd] mb-8 leading-relaxed">
                 Get your free estimate in 30 minutes. Our mobile PDR service comes to you anywhere in Greater Houston.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-gray-100 text-lg px-10 py-6">
+                <Button asChild size="lg" className="bg-[#60a5fa] hover:bg-[#3b82f6] text-[#0a0f1a] font-semibold text-lg px-10 py-6">
                   <Link href="/estimate">
                     Get Free Estimate
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-10 py-6">
+                <Button asChild size="lg" variant="outline" className="border-[#60a5fa] text-[#e8eaed] hover:bg-[#60a5fa]/10 text-lg px-10 py-6">
                   <Link href="tel:+13467020510">
                     <Phone className="mr-2 h-5 w-5" />
                     Call (346) 702-0510
                   </Link>
                 </Button>
               </div>
-              <p className="mt-6 text-blue-200 text-sm">
+              <p className="mt-6 text-[#60a5fa] text-sm">
                 Lifetime warranty on all repairs • 100% satisfaction guaranteed
               </p>
             </div>

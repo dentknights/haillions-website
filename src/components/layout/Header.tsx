@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -19,29 +20,25 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-black/90 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-[#1e3a5f]/50 bg-[#0a0f1a]/95 backdrop-blur-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-10 w-10">
-              <svg viewBox="0 0 40 40" className="h-full w-full" aria-hidden="true">
-                <circle cx="20" cy="20" r="18" fill="#3b82f6" />
-                <path
-                  d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8"
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-                <circle cx="20" cy="20" r="3" fill="white" />
-              </svg>
+            <div className="relative h-12 w-12">
+              <Image
+                src="/images/hail-lions-logo.png"
+                alt="Hail Lions PDR Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-bold leading-none text-white">
+              <span className="text-xl font-bold leading-none text-silver">
                 Hail Lions
               </span>
-              <span className="text-xs text-gray-500">PDR</span>
+              <span className="text-xs text-[#94a3b8]">PDR</span>
             </div>
           </Link>
 
@@ -54,8 +51,8 @@ export function Header() {
                 className={cn(
                   "px-4 py-2 text-sm font-medium transition-colors rounded-md",
                   link.href === "/estimate" || link.href === "/schedule"
-                    ? "text-blue-400 hover:text-blue-300 hover:bg-blue-500/10"
-                    : "text-gray-400 hover:text-white hover:bg-white/5"
+                    ? "text-[#60a5fa] hover:text-[#93c5fd] hover:bg-[#60a5fa]/10"
+                    : "text-[#94a3b8] hover:text-[#e8eaed] hover:bg-white/5"
                 )}
               >
                 {link.label}
@@ -67,19 +64,19 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:+13467020510"
-              className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-[#94a3b8] hover:text-[#e8eaed] transition-colors"
             >
               <Phone className="h-4 w-4" />
               <span>(346) 702-0510</span>
             </a>
-            <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button asChild size="sm" className="bg-[#60a5fa] hover:bg-[#3b82f6] text-[#0a0f1a] font-semibold">
               <Link href="/estimate">Get Estimate</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-md hover:bg-white/10 text-white"
+            className="lg:hidden p-2 rounded-md hover:bg-white/10 text-[#e8eaed]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-expanded={isMenuOpen}
             aria-label="Toggle menu"
@@ -95,7 +92,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden border-t border-white/10 bg-black/95 backdrop-blur-md">
+        <div className="lg:hidden border-t border-[#1e3a5f]/50 bg-[#0a0f1a]/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
@@ -105,23 +102,23 @@ export function Header() {
                   className={cn(
                     "px-4 py-3 text-base font-medium rounded-md transition-colors",
                     link.href === "/estimate" || link.href === "/schedule"
-                      ? "text-blue-400 hover:text-blue-300 bg-blue-500/10"
-                      : "text-gray-400 hover:text-white hover:bg-white/5"
+                      ? "text-[#60a5fa] hover:text-[#93c5fd] bg-[#60a5fa]/10"
+                      : "text-[#94a3b8] hover:text-[#e8eaed] hover:bg-white/5"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-4 pt-4 border-t border-white/10">
+              <div className="mt-4 pt-4 border-t border-[#1e3a5f]/50">
                 <a
                   href="tel:+13467020510"
-                  className="flex items-center gap-2 px-4 py-3 text-base font-medium text-gray-400"
+                  className="flex items-center gap-2 px-4 py-3 text-base font-medium text-[#94a3b8]"
                 >
                   <Phone className="h-5 w-5" />
                   <span>(346) 702-0510</span>
                 </a>
-                <Button asChild className="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white">
+                <Button asChild className="w-full mt-2 bg-[#60a5fa] hover:bg-[#3b82f6] text-[#0a0f1a] font-semibold">
                   <Link href="/estimate">Get Free Estimate</Link>
                 </Button>
               </div>
