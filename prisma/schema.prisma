@@ -1,0 +1,180 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  phone       String?
+  firstName   String
+  lastName    String
+  address     String?
+  city        String?
+  state       String?
+  zipCode     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  estimates   Estimate[]
+  appointments Appointment[]
+  vehicles    Vehicle[]
+  
+  @@index([email])
+  @@index([phone])
+  @@map("customers")
+}
+
+model Vehicle {
+  id          String   @id @default(cuid())
+  customerId  String
+  make        String
+  model       String
+  year        Int
+  color       String?
+  vin         String?
+  licensePlate String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  customer    Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  estimates   Estimate[]
+  
+  @@index([customerId])
+  @@map("vehicles")
+}
+
+model Estimate {
+  id              String        @id @default(cuid())
+  customerId      String
+  vehicleId       String?
+  status          EstimateStatus @default(PENDING)
+  dentCount       Int?
+  severity        Severity?
+  estimatedCost   Decimal?      @db.Decimal(10, 2)
+  aiAnalysis      Json?         // Store AI analysis results
+  damageType      String[]      // Hail, door ding, crease, etc.
+  notes           String?       @db.Text
+  submittedAt     DateTime      @default(now())
+  reviewedAt      DateTime?
+  approvedAt      DateTime?
+  rejectedAt      DateTime?
+  reviewedBy      String?
+  
+  customer        Customer      @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  vehicle         Vehicle?      @relation(fields: [vehicleId], references: [id])
+  photos          EstimatePhoto[]
+  appointment     Appointment?
+  
+  @@index([customerId])
+  @@index([status])
+  @@index([submittedAt])
+  @@map("estimates")
+}
+
+model EstimatePhoto {
+  id          String   @id @default(cuid())
+  estimateId  String
+  url         String
+  thumbnailUrl String?
+  filename    String
+  size        Int
+  mimeType    String
+  width       Int?
+  height      Int?
+  altText     String?
+  isPrimary   Boolean  @default(false)
+  uploadedAt  DateTime @default(now())
+  
+  estimate    Estimate @relation(fields: [estimateId], references: [id], onDelete: Cascade)
+  
+  @@index([estimateId])
+  @@map("estimate_photos")
+}
+
+model Appointment {
+  id              String            @id @default(cuid())
+  customerId      String
+  estimateId      String?           @unique
+  status          AppointmentStatus @default(SCHEDULED)
+  scheduledDate   DateTime
+  startTime       String            // HH:mm format
+  endTime         String            // HH:mm format
+  duration        Int               // in minutes
+  serviceType     String
+  notes           String?           @db.Text
+  location        String?           // For mobile service
+  isMobile        Boolean           @default(true)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  completedAt     DateTime?
+  cancelledAt     DateTime?
+  cancellationReason String?
+  
+  customer        Customer          @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  estimate        Estimate?         @relation(fields: [estimateId], references: [id])
+  
+  @@index([customerId])
+  @@index([scheduledDate])
+  @@index([status])
+  @@map("appointments")
+}
+
+model AdminUser {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  role          AdminRole @default(ADMIN)
+  isActive      Boolean   @default(true)
+  lastLoginAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  @@map("admin_users")
+}
+
+model BusinessHours {
+  id        String   @id @default(cuid())
+  dayOfWeek Int      @unique // 0 = Sunday, 6 = Saturday
+  isOpen    Boolean  @default(true)
+  openTime  String   // HH:mm format
+  closeTime String   // HH:mm format
+  slotDuration Int  @default(60) // minutes
+  
+  @@map("business_hours")
+}
+
+enum EstimateStatus {
+  PENDING
+  ANALYZING
+  REVIEWING
+  APPROVED
+  REJECTED
+  EXPIRED
+}
+
+enum Severity {
+  MINOR
+  MODERATE
+  SEVERE
+  EXTREME
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+enum AdminRole {
+  ADMIN
+  TECHNICIAN
+  MANAGER
+}
