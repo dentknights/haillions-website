@@ -55,11 +55,11 @@ export function Footer() {
             </p>
             <div className="space-y-4">
               <a
-                href="tel:+13467020510"
+                href="tel:+12813525434"
                 className="flex items-center gap-3 text-[#94a3b8] hover:text-[#e8eaed] transition-colors"
               >
                 <Phone className="h-5 w-5 text-[#60a5fa]" />
-                <span>(346) 702-0510</span>
+                <span>(281) 352-5434</span>
               </a>
               <a
                 href="mailto:info@haillions.com"

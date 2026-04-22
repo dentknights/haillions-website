@@ -224,12 +224,12 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0a0f1a] via-[#111827] to-[#0a0f1a]" aria-labelledby="hero-heading">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/80 via-[#111827]/60 to-[#0a0f1a]/90 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1a]/60 via-[#111827]/40 to-[#0a0f1a]/70 z-10" />
             <Image
               src="/images/hero-dent-repair.jpg"
               alt="Professional paintless dent repair"
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-40"
               priority
               sizes="100vw"
             />
@@ -275,9 +275,9 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-[#1e3a5f] text-[#e8eaed] hover:bg-[#1e3a5f]/50 text-lg px-10 py-6">
-                  <Link href="tel:+13467020510">
+                  <Link href="tel:+12813525434">
                     <Phone className="mr-2 h-5 w-5" />
-                    (346) 702-0510
+                    (281) 352-5434
                   </Link>
                 </Button>
               </div>
@@ -582,9 +582,9 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-[#60a5fa] text-[#e8eaed] hover:bg-[#60a5fa]/10 text-lg px-10 py-6">
-                  <Link href="tel:+13467020510">
+                  <Link href="tel:+12813525434">
                     <Phone className="mr-2 h-5 w-5" />
-                    Call (346) 702-0510
+                    Call (281) 352-5434
                   </Link>
                 </Button>
               </div>

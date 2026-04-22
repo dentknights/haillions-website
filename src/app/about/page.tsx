@@ -152,9 +152,9 @@ export default function AboutPage() {
                     <Link href="/estimate">Get Your Free Estimate</Link>
                   </Button>
                   <Button asChild size="lg" variant="outline">
-                    <Link href="tel:+13467020510">
+                    <Link href="tel:+12813525434">
                       <Phone className="mr-2 h-5 w-5" />
-                      Call (346) 702-0510
+                      Call (281) 352-5434
                     </Link>
                   </Button>
                 </div>
@@ -343,7 +343,7 @@ export default function AboutPage() {
                 <Link href="/estimate">Get Free Estimate</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg">
-                <Link href="tel:+13467020510">Call (346) 702-0510</Link>
+                <Link href="tel:+12813525434">Call (281) 352-5434</Link>
               </Button>
             </div>
           </div>

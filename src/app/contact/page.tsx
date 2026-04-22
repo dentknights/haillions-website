@@ -12,8 +12,8 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight, CheckCircle } fr
 
 // Enhanced SEO metadata for contact page
 export const metadata: Metadata = {
-  title: "Contact Hail Lions PDR | Houston Paintless Dent Repair (346) 702-0510",
-  description: "Contact Hail Lions PDR for mobile paintless dent repair in Houston, TX. Call (346) 702-0510 or request a free estimate online. Serving Katy, Sugar Land, The Woodlands & Greater Houston.",
+  title: "Contact Hail Lions PDR | Houston Paintless Dent Repair (281) 352-5434",
+  description: "Contact Hail Lions PDR for mobile paintless dent repair in Houston, TX. Call (281) 352-5434 or request a free estimate online. Serving Katy, Sugar Land, The Woodlands & Greater Houston.",
   keywords: [
     "contact Hail Lions PDR",
     "paintless dent repair Houston phone",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Contact Hail Lions PDR | Houston Paintless Dent Repair",
-    description: "Contact us for mobile PDR in Houston. Call (346) 702-0510 or request a free estimate. Serving Greater Houston area.",
+    description: "Contact us for mobile PDR in Houston. Call (281) 352-5434 or request a free estimate. Serving Greater Houston area.",
     url: "https://haillions.com/contact",
   },
 };
@@ -43,8 +43,8 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Call or Text",
-    value: "(346) 702-0510",
-    href: "tel:+13467020510",
+    value: "(281) 352-5434",
+    href: "tel:+12813525434",
     description: "Fastest response for urgent repairs",
     availability: "Mon-Sat: 8am-6pm",
     action: "Call Now",
@@ -264,10 +264,10 @@ export default function ContactPage() {
                 {/* Contact Info */}
                 <div className="border rounded-2xl p-8">
                   <h3 className="text-xl font-semibold mb-4">Direct Contact</h3>
-                  <div className="space-y-3">
+                <div className="space-y-3">
                     <p className="flex items-center gap-3">
                       <Phone className="h-5 w-5 text-primary" />
-                      <a href="tel:+13467020510" className="hover:underline">(346) 702-0510</a>
+                      <a href="tel:+12813525434" className="hover:underline">(281) 352-5434</a>
                     </p>
                     <p className="flex items-center gap-3">
                       <Mail className="h-5 w-5 text-primary" />
@@ -312,7 +312,7 @@ export default function ContactPage() {
             </div>
             <p className="text-center text-muted-foreground mt-8">
               Don&apos;t see your area? We may still be able to help!{" "}
-              <a href="tel:+13467020510" className="text-primary hover:underline">Call us at (346) 702-0510</a>
+              <a href="tel:+12813525434" className="text-primary hover:underline">Call us at (281) 352-5434</a>
             </p>
           </div>
         </section>
@@ -356,7 +356,7 @@ export default function ContactPage() {
                 <Link href="/estimate">Get Free Estimate</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg">
-                <a href="tel:+13467020510">Call (346) 702-0510</a>
+                <a href="tel:+12813525434">Call (281) 352-5434</a>
               </Button>
             </div>
           </div>
