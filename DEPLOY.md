@@ -25,6 +25,7 @@ Set these in Vercel Dashboard → Project Settings → Environment Variables:
 | `OPENAI_API_KEY` | For AI dent analysis | `sk-...` |
 | `BLOB_READ_WRITE_TOKEN` | Vercel Blob for images | `vercel_blob_rw_...` |
 | `ADMIN_PASSWORD_HASH` | Hashed admin password | bcrypt hash |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 ID | `G-XXXXXXXXXX` |
 
 ## Database Setup
 
@@ -91,6 +92,39 @@ The project uses:
 ## Edge Functions
 
 API routes in `/app/api` are automatically deployed as serverless functions.
+
+## Google Analytics Setup
+
+1. Create a Google Analytics 4 property at https://analytics.google.com
+2. Get your Measurement ID (starts with `G-`)
+3. Add to environment variables: `NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX`
+4. Redeploy to activate tracking
+
+### Tracked Events
+
+The following events are automatically tracked:
+- **Page views** - All page navigation
+- **Button clicks** - CTA interactions
+- **Form submissions** - Estimates, appointments, contact
+- **Phone/Email clicks** - Contact method usage
+- **Photo uploads** - Estimate workflow
+- **Scroll depth** - User engagement
+- **Admin actions** - Login, estimate reviews
+
+### Custom Events
+
+Use the tracking utilities in your components:
+```typescript
+import { trackButtonClick, trackEstimateSubmit } from "@/components/analytics";
+
+// Track a button click
+<button onClick={() => trackButtonClick("Get Estimate", "hero")}>
+  Get Estimate
+</button>
+
+// Track form submission
+trackEstimateSubmit(true);
+```
 
 ## Post-Deploy Checklist
 
