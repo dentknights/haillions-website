@@ -38,14 +38,14 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="relative h-12 w-12">
                 <Image
-                  src="/images/hail-lions-logo.png"
-                  alt="Hail Lions PDR"
+                  src="/images/hail-knights-logo.jpg"
+                  alt="Hail Knights PDR"
                   fill
                   className="object-contain"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold leading-none text-silver">Hail Lions</span>
+                <span className="text-xl font-bold leading-none text-silver">Hail Knights</span>
                 <span className="text-sm text-[#64748b]">Paintless Dent Repair</span>
               </div>
             </Link>

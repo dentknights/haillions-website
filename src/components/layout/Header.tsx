@@ -27,8 +27,8 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3">
             <div className="relative h-12 w-12">
               <Image
-                src="/images/hail-lions-logo.png"
-                alt="Hail Lions PDR Logo"
+                src="/images/hail-knights-logo.jpg"
+                alt="Hail Knights PDR Logo"
                 fill
                 className="object-contain"
                 priority
@@ -36,7 +36,7 @@ export function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold leading-none text-silver">
-                Hail Lions
+                Hail Knights
               </span>
               <span className="text-xs text-[#94a3b8]">PDR</span>
             </div>
